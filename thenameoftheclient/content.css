@@ -1,0 +1,138 @@
+
+body {
+    margin:0;
+}
+
+.comments-area {
+    display: none;
+}
+
+.entry-title{
+    /* padding: 0;
+    margin: 0; */
+    /* display: inline; */
+}
+
+.entry-header{
+    height: 100vh;
+}
+
+article {
+    display: inline-block;      
+}
+
+.entry-content {
+    width: 42%;
+    float: right;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    padding-right: 1em;
+    padding: 0 5% 0 0;
+
+}
+
+figcaption {
+    position: absolute;
+    bottom:0px;
+    color: white;
+}
+
+.entry-meta{
+    display: none;
+}
+
+.wp-block-quote {
+
+    position: absolute;
+    color: white;
+    left: 0 ;
+    display: none;
+}
+
+.site-branding-container, .skip-link, .site-header {
+    display: none;
+}
+
+
+
+.img-transition {
+
+    filter: blur(0);
+    animation: mymove 1s;
+    
+
+}
+
+
+
+#image-container{
+    position: sticky    ;
+    /* left:0.2em; */   
+    top:0;          
+    width: 47vw;
+    background-color: white ;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;           
+    float: left;
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-color: white;
+}
+
+
+
+
+.site{
+    /* width: 57%;
+    float: right; */
+}
+
+.entry-content .image-aside  {
+    padding:0;
+    margin: 0;
+    height:0;
+}
+
+.image-aside figcaption{
+    display: none;
+}
+
+.entry-content .image-aside img{
+ 
+    height: 0;
+}
+
+.image-aside {
+   
+    margin: 0;
+}
+
+.element-img {
+    opacity: 0;
+    top: 0;
+ 
+    position: absolute;
+    transition: opacity 0.5s;
+   
+}
+.element-img.is-visible{
+   
+    /* display: inline !important; */
+  
+    opacity: 1;
+    animation: visible 1s;
+
+}     
+
+.image-container .image-aside {
+    height: 100vh;
+
+}
+
+@keyframes visible {
+    from { filter: blur(10px); top:10px; max-width: 105%; left:-30px}
+    to { filter: blur(0); top:0; max-width: 100%; left:0}
+  }
