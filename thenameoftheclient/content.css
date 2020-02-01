@@ -132,7 +132,11 @@ figcaption {
 
 }
 
+.horisontal-img{
+    margin-top: 40%;
+}
+
 @keyframes visible {
-    from { filter: blur(10px); top:10px; max-width: 105%; left:-30px}
+    from { filter: blur(10px); top:10px; max-width: 105%; left:-10px}
     to { filter: blur(0); top:0; max-width: 100%; left:0}
   }

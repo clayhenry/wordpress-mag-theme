@@ -70,6 +70,14 @@ function init(){
         currentElements.push(e.outerHTML)
         content.innerHTML += currentElements[i]
         contentImd[i].classList.add("element-img");
+        console.log(contentImd[i].height)
+
+        if(contentImd[i].height < contentImd[i].width || contentImd[i].height == 0 ){
+            contentImd[i].classList.add("horisontal-img");
+            console.log(contentImd[i])
+
+        }
+       
 
     })
     contentImd[0].classList.add("is-visible")
