@@ -8,9 +8,12 @@
  */
 
 $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null; ?>
-
-<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+<div class="entry-title">
+<?php the_title( '<h1>', '</h1>' ); ?>
+<div class="post-excerpt">
+	<?php the_excerpt() ?>
+</div>
+</div>
 <?php if ( ! is_page() ) : ?>
 <div class="entry-meta">
 	<?php twentynineteen_posted_by(); ?>

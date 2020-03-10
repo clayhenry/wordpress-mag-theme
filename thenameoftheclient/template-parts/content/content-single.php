@@ -28,6 +28,8 @@
 	?> 
 	</header>
 
+	<div class="entry-body">
+
 		<?php
 		the_content(
 			sprintf(
@@ -62,7 +64,7 @@
 	<?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
-
+</div>
 <footer class="entry-footer">
 		<?php 
 		twentynineteen_entry_footer();

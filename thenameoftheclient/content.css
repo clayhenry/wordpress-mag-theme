@@ -15,6 +15,22 @@ body {
 
 .entry-header{
     height: 100vh;
+    text-align: center;
+    font-size: 1.8em;
+    line-height: normal;
+    margin: auto;
+
+}
+
+.entry-title  {
+    position: absolute;
+    top: 30%;
+    width: 40%;
+    
+}
+.post-excerpt{
+    font-size: 0.4em;
+    color: #5d5d5d;
 }
 
 article {
@@ -30,6 +46,23 @@ article {
     padding: 0 5% 0 0;
 
 }
+
+.entry-body p {
+    opacity: 0;
+}
+
+
+.hidden-paragraph {
+    opacity: 0;   
+}
+.show-paragraph{
+    opacity: 1;
+    animation: paraga 0.5s ease-in 0.2s;
+    animation-fill-mode: forwards;
+    
+}
+
+
 
 figcaption {
     position: absolute;
@@ -84,7 +117,6 @@ figcaption {
 
 
 
-
 .site{
     /* width: 57%;
     float: right; */
@@ -132,11 +164,19 @@ figcaption {
 
 }
 
+
+
 .horisontal-img{
     margin-top: 40%;
+    border-left: 7px solid white;
 }
 
 @keyframes visible {
     from { filter: blur(10px); top:10px; max-width: 105%; left:-10px}
     to { filter: blur(0); top:0; max-width: 100%; left:0}
+  }
+
+  @keyframes paraga {
+    from { opacity: 0;}
+    to { opacity: 1;}
   }
