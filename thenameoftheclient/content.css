@@ -47,17 +47,19 @@ article {
 
 }
 
-.entry-body p {
+.entry-body p, .entry-body h2 {
     opacity: 0;
+    margin-top: 0;
 }
 
 
 .hidden-paragraph {
-    opacity: 0;   
+    opacity: 0;  
+   
 }
 .show-paragraph{
     opacity: 1;
-    animation: paraga 0.5s ease-in 0.2s;
+    animation: paraga 0.5s ease-out 0.2s;
     animation-fill-mode: forwards;
     
 }
@@ -79,10 +81,6 @@ figcaption {
     position: absolute;
     color: white;
     left: 0 ;
-    display: none;
-}
-
-.site-branding-container, .skip-link, .site-header {
     display: none;
 }
 
@@ -155,7 +153,7 @@ figcaption {
     /* display: inline !important; */
   
     opacity: 1;
-    animation: visible 1s;
+    animation: visible 0.5s;
 
 }     
 
@@ -167,8 +165,9 @@ figcaption {
 
 
 .horisontal-img{
-    margin-top: 40%;
+    margin-top: 50%;
     border-left: 7px solid white;
+
 }
 
 @keyframes visible {
@@ -177,6 +176,6 @@ figcaption {
   }
 
   @keyframes paraga {
-    from { opacity: 0;}
-    to { opacity: 1;}
+    from { opacity: 0;  margin-top: 20px;}
+    to { opacity: 1;  margin-top: 0;}
   }

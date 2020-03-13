@@ -4,6 +4,7 @@ let contentImd = content.getElementsByTagName("img");
 let entryContent = document.getElementsByClassName("entry-content")
 let quote = document.getElementsByClassName("wp-block-quote")
 let paragraph = document.querySelectorAll(".entry-body p");
+let headding = document.querySelectorAll(".entry-body h2");
 let page = document.getElementById("page");
 let currentOffset = 0;
 let currentHeight = window.innerHeight;
@@ -25,6 +26,7 @@ for (let index = 0; index < asides.length; index++) {
 let displayed = [];
 let current = 0;
 let contentParagraph
+let contentHeading;
 
 function updateDisplay(){
 
@@ -42,20 +44,27 @@ function updateDisplay(){
             if ((paragraphPositionFromTop - currentHeight <= 0)) {
                
                 // console.log(e)
-                contentParagraph = i;
+                // contentParagraph = i;
                 
                 paragraph[i].classList.remove("hidden-paragraph")
                 paragraph[i].classList.add("show-paragraph")
             } 
           
         });
-        // for (let p = 0; p < paragraph.length; p++) {
-        //     if(p != contentParagraph){
-        //         paragraph[p].classList.remove("hidden-paragraph")
-        //       // contentImd[j].classList.add("not-visible")
-        //     }
-            
-        // }
+
+        headding.forEach((e, i)=>{
+            var headingFromTop = headding[i].getBoundingClientRect().top;
+
+            if ((headingFromTop - currentHeight <= 0)) {
+               
+                // console.log(e)
+                // contentParagraph = i;
+                
+                headding[i].classList.remove("hidden-paragraph")
+                headding[i].classList.add("show-paragraph")
+            } 
+        })
+ 
    
         for (var i = 0; i < asides.length; i++) {
     
@@ -96,9 +105,13 @@ function init(){
         content.innerHTML += currentElements[i]
         contentImd[i].classList.add("element-img");
 
-        if(contentImd[i].height < contentImd[i].width || contentImd[i].height == 0 ){
-            contentImd[i].classList.add("horisontal-img");
-        }
+        setTimeout(function(){
+            if(contentImd[i].height < contentImd[i].width ){
+
+                contentImd[i].classList.add("horisontal-img");
+            }
+
+        }, 0)
        
 
     })
