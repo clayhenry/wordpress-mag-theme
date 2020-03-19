@@ -34,7 +34,7 @@ function example_cats_related_post() {
         'category__in'   => $cat_ids,
         'post_type'      => $current_post_type,
         'post__not_in'    => array($post_id),
-        'posts_per_page'  => '4'
+        'posts_per_page'  => '20'
 
 
      );
@@ -53,12 +53,17 @@ function example_cats_related_post() {
                     <div class="recommended-item">
                     <a href="<?php the_permalink(); ?>">
                    
-                        <div class="recommended-image" style="background-image: url('<?php echo the_post_thumbnail_url([200,300]); ?>')"> 
-                        <div class="recommended-title-container">
-                            <div class="recommended-title"> <?php the_title(); ?> </div> 
-                        </div>
-                        </div>
 
+                    <div class="recommended-image" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')">
+                    </div>
+                    <div class="recommended-title-container">
+                            <div class="recommended-title"> <?php the_title(); ?> </div> 
+                    
+                        </div>
+    
+              
+                        
+                    
                         
                     </a>
                     </div>

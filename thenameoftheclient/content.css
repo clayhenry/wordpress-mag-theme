@@ -38,18 +38,23 @@ article {
 }
 
 .entry-content {
-    width: 42%;
     float: right;
     font-size: 1.4em;
     line-height: 1.5em;
-    padding-right: 1em;
-    padding: 0 5% 0 0;
-
+}
+.content-img {
+    margin-left: -40px;
 }
 
+.content-img img {
+    float: right;
+}
+
+.entry-body h2 {
+    padding-top:20px;
+}
 .entry-body p, .entry-body h2 {
     opacity: 0;
-    margin-top: 0;
 }
 
 
@@ -100,7 +105,6 @@ figcaption {
     position: sticky    ;
     /* left:0.2em; */   
     top:0;          
-    width: 47vw;
     background-color: white ;
     height: 100vh;
     margin: 0;
@@ -121,7 +125,6 @@ figcaption {
 }
 
 .entry-content .image-aside  {
-    padding:0;
     margin: 0;
     height:0;
 }
@@ -169,6 +172,80 @@ figcaption {
     border-left: 7px solid white;
 
 }
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    #image-container{
+        width: 47vw;
+      
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #image-container{
+        width: 47vw;
+    }
+
+    .entry-content {
+        width: 48%;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #image-container{
+        width: 47vw;
+    }
+
+    .entry-content {
+        width: 48%;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #image-container{
+        width: 47vw;
+    }
+
+    .entry-content {
+        width: 48%;
+    }
+    .entry-body p, .entry-body h2 {
+        width: 85%;
+    }
+    .entry-content .image-aside  {
+        padding: 60px;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #image-container{
+        width: 37vw;
+    }
+
+    .entry-content {
+        width: 58%;
+    }
+    .entry-body p, .entry-body h2 {
+        width: 85%;
+    }
+    .entry-content .image-aside  {
+        padding: 100px;
+    }
+
+}
+
+
 
 @keyframes visible {
     from { filter: blur(10px); top:10px; max-width: 105%; left:-10px}
