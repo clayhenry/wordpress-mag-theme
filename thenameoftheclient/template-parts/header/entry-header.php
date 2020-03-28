@@ -13,6 +13,20 @@ $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentyni
 <div class="post-excerpt">
 	<?php the_excerpt() ?>
 </div>
+<?php
+
+
+ 	$category_detail=get_the_category();//$post->ID
+	 foreach($category_detail as $cd){
+		 $cat_url = get_category_link($cd->term_id);
+	 echo "<div class='category'>From <a href='{$cat_url}'>{$cd->cat_name}</a></div>";
+
+	 
+
+}
+
+
+?>
 </div>
 <?php if ( ! is_page() ) : ?>
 <div class="entry-meta">

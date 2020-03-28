@@ -25,6 +25,7 @@
 	<header class="entry-header">
 	<?php 
 		get_template_part( 'template-parts/header/entry', 'header' ); 
+	
 	?> 
 	</header>
 

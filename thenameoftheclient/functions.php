@@ -49,7 +49,7 @@ function example_cats_related_post() {
          ?>
          
             
-                <li>
+                
                     <div class="recommended-item">
                     <a href="<?php the_permalink(); ?>">
                    
@@ -60,15 +60,12 @@ function example_cats_related_post() {
                             <div class="recommended-title"> <?php the_title(); ?> </div> 
                     
                         </div>
-    
-              
-                        
-                    
+
                         
                     </a>
                     </div>
                     
-                </li>
+                
             
         <?php  endwhile;
 

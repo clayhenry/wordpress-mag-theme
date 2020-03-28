@@ -9,6 +9,7 @@
 ?>
 <div class="site-branding">
 
-		sitebranding.php
+	<h1 class="mast"> <a href="/">Today Is Another Day</a></h1>
+	
 
 </div><!-- .site-branding -->

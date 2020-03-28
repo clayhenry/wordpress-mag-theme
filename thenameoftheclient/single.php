@@ -56,11 +56,11 @@ get_header();
 		</main><!-- #main -->
 	</section><!-- #primary -->
 	<div class="recommended-articles">
-		<ul class="recommended-list">	
+		
 		<?php 
 	example_cats_related_post();
 
-	?>	</ul>
+	?>	
 		</div>
 <?php
 

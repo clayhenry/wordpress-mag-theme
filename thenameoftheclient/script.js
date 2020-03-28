@@ -90,7 +90,11 @@ function updateDisplay(){
         
 }
 
+var h=window.innerWidth;
+
+if(h >730){
 window.addEventListener('scroll',updateDisplay);
+}
 
 function init(){
 
@@ -98,6 +102,14 @@ function init(){
         e.classList.add("hidden-paragraph")
     })
 
+
+
+
+
+
+
+        
+   console.log("not mobile")
     asides.forEach((e, i)=>{ 
 
         imagesrc.push(e.getElementsByTagName("img")[0].src)
@@ -115,10 +127,11 @@ function init(){
        
 
     })
-    contentImd[0].classList.add("is-visible")
 
-   
+    contentImd[0].classList.add("is-visible")
 }
+
+
 
 
 init();
