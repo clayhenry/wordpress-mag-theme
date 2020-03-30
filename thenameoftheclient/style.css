@@ -7,6 +7,62 @@ Template:     twentynineteen
 Version:      1.0.0
 */
 
+body {
+    padding: 0;
+    margin: 0;
+}
+.home .site-content{
+    margin: 10px;
+    width: 1200px;
+    border: 1px solid red;
+}
+
+.home .post {
+    width: 300px;
+    height: 550px;
+
+    float: left;
+    margin: 10px;
+
+}
+
+.home .post:first-child {
+    width: 700px;    
+    
+    height: 400px;
+}
+
+.home .post:nth-child(2) 
+{
+    width: 300px;  
+  
+    height: 400px;
+}
+
+.home .post:nth-child(2) p
+{
+  display: none;
+}
+
+
+.home .post:first-child img {
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+
+
+.home .post:first-child .entry-content {
+    float: left;
+    width: 200px;
+    padding: 10px;
+}
+
+.home .post img {
+    width: 300px;
+    height: 300px;
+    /* display: none; */
+}
 
 .mast {
     padding: 0;

@@ -12,6 +12,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<a href="<?php echo esc_url( get_permalink()); ?>"><?php the_post_thumbnail([400,400]);  ?> </a>
+<div class="entry-content">
 	<header class="entry-header">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
@@ -24,25 +26,28 @@
 		endif;
 		?>
 	</header><!-- .entry-header -->
+	
 
-	<?php twentynineteen_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	
+
+<?php
+
+
+ 	$category_detail=get_the_category();//$post->ID
+	 foreach($category_detail as $cd){
+		 $cat_url = get_category_link($cd->term_id);
+	 echo "<div class='category'>From <a href='{$cat_url}'>{$cd->cat_name}</a></div>";
+
+	 
+
+}
+?>
+
+	
 		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentynineteen' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)
-		);
+
+the_excerpt();
 
 		wp_link_pages(
 			array(
